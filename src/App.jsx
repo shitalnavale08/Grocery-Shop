@@ -1,12 +1,13 @@
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter,Route,Routes } from 'react-router-dom'
-import Header from './Component/Header'
- import Loader from './Component/Loader'
-import Footer from './Component/Footer'
-import NotFound from './Component/NotFound'
-const Home = lazy(() => import('./Pages/Home'))
-const Cart = lazy(() => import('./Pages/Cart'))
-const Checkout = lazy(() => import('./Pages/Checkout'))
+import Header from './Components/Header/Header'
+import Loader from './Components/Loader/Loader'
+import Footer from './Components/Footer/Footer'
+const NotFound = lazy(() => import('./Components/NotFound/NotFound')) 
+const Home = lazy(() => import('./Pages/Home')) 
+const CartPage = lazy(() => import('./Pages/Cart/CartPage')) 
+const Checkout = lazy(() => import('./Pages/Checkout')) 
+
 
 
 const App = () => {
@@ -15,8 +16,8 @@ const App = () => {
       <BrowserRouter>
     <Header/>
     <Routes>
-      <Route path ='/' element={<Home/>}/>
-      <Route path ='/cart'element={<Cart/>}/>
+      <Route path='/' element={<Home/>}/>
+      <Route path='/cart'element={<CartPage/>}/>
       <Route path='/checkout'element={<Checkout/>}/>
       <Route path='/*'element={<NotFound/>}/>
     </Routes>
