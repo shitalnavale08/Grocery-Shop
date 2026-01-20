@@ -2,8 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Search, Heart, ShoppingCart, UserRound, Leaf, X, ShoppingBag } from 'lucide-react';
 import { Badge } from './Badge';
-import  ProfileDropdown  from './ProfileDropdown';
-import {CartDrawer}  from './CartDrawer';
+import { ProfileDropdown } from './ProfileDropdown';
+import { CartDrawer } from './CartDrawer';
 import Navigation from './Navigation';
 import { Link } from 'react-router-dom';
 ;
